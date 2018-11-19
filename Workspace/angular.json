@@ -1,0 +1,397 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "apps-aurora": {
+      "root": "apps/apps/aurora/",
+      "sourceRoot": "apps/apps/aurora/src",
+      "projectType": "application",
+      "prefix": "Aurora",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/apps/aurora",
+            "index": "apps/apps/aurora/src/index.html",
+            "main": "apps/apps/aurora/src/main.ts",
+            "polyfills": "apps/apps/aurora/src/polyfills.ts",
+            "tsConfig": "apps/apps/aurora/tsconfig.app.json",
+            "assets": [
+              "apps/apps/aurora/src/favicon.ico",
+              "apps/apps/aurora/src/assets"
+            ],
+            "styles": [
+              "apps/apps/aurora/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/apps/aurora/src/environments/environment.ts",
+                  "with": "apps/apps/aurora/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "apps-aurora:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "apps-aurora:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "apps-aurora:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/apps/aurora/src/test.ts",
+            "polyfills": "apps/apps/aurora/src/polyfills.ts",
+            "tsConfig": "apps/apps/aurora/tsconfig.spec.json",
+            "karmaConfig": "apps/apps/aurora/karma.conf.js",
+            "styles": [
+              "apps/apps/aurora/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/apps/aurora/src/favicon.ico",
+              "apps/apps/aurora/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/apps/aurora/tsconfig.app.json",
+              "apps/apps/aurora/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "apps-aurora-e2e": {
+      "root": "apps/apps/aurora-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/apps/aurora-e2e/protractor.conf.js",
+            "devServerTarget": "apps-aurora:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "apps-aurora:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/apps/aurora-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "test-aurora": {
+      "root": "apps/test/aurora/",
+      "sourceRoot": "apps/test/aurora/src",
+      "projectType": "application",
+      "prefix": "Aurora",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/test/aurora",
+            "index": "apps/test/aurora/src/index.html",
+            "main": "apps/test/aurora/src/main.ts",
+            "polyfills": "apps/test/aurora/src/polyfills.ts",
+            "tsConfig": "apps/test/aurora/tsconfig.app.json",
+            "assets": [
+              "apps/test/aurora/src/favicon.ico",
+              "apps/test/aurora/src/assets"
+            ],
+            "styles": [
+              "apps/test/aurora/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/test/aurora/src/environments/environment.ts",
+                  "with": "apps/test/aurora/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "test-aurora:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "test-aurora:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "test-aurora:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/test/aurora/src/test.ts",
+            "polyfills": "apps/test/aurora/src/polyfills.ts",
+            "tsConfig": "apps/test/aurora/tsconfig.spec.json",
+            "karmaConfig": "apps/test/aurora/karma.conf.js",
+            "styles": [
+              "apps/test/aurora/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/test/aurora/src/favicon.ico",
+              "apps/test/aurora/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/test/aurora/tsconfig.app.json",
+              "apps/test/aurora/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "test-aurora-e2e": {
+      "root": "apps/test/aurora-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/test/aurora-e2e/protractor.conf.js",
+            "devServerTarget": "test-aurora:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "test-aurora:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/test/aurora-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "aurora": {
+      "root": "apps/aurora/",
+      "sourceRoot": "apps/aurora/src",
+      "projectType": "application",
+      "prefix": "Aurora",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/aurora",
+            "index": "apps/aurora/src/index.html",
+            "main": "apps/aurora/src/main.ts",
+            "polyfills": "apps/aurora/src/polyfills.ts",
+            "tsConfig": "apps/aurora/tsconfig.app.json",
+            "assets": [
+              "apps/aurora/src/favicon.ico",
+              "apps/aurora/src/assets"
+            ],
+            "styles": [
+              "apps/aurora/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/aurora/src/environments/environment.ts",
+                  "with": "apps/aurora/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "aurora:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "aurora:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "aurora:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/aurora/src/test.ts",
+            "polyfills": "apps/aurora/src/polyfills.ts",
+            "tsConfig": "apps/aurora/tsconfig.spec.json",
+            "karmaConfig": "apps/aurora/karma.conf.js",
+            "styles": [
+              "apps/aurora/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/aurora/src/favicon.ico",
+              "apps/aurora/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/aurora/tsconfig.app.json",
+              "apps/aurora/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "aurora-e2e": {
+      "root": "apps/aurora-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/aurora-e2e/protractor.conf.js",
+            "devServerTarget": "aurora:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "aurora:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/aurora-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/schematics",
+    "packageManager": "npm"
+  },
+  "defaultProject": "apps-aurora"
+}
