@@ -4,8 +4,8 @@
   "newProjectRoot": "",
   "projects": {
     "apps-aurora": {
-      "root": "apps/apps/aurora/",
-      "sourceRoot": "apps/apps/aurora/src",
+      "root": "apps/aurora/",
+      "sourceRoot": "apps/aurora/src",
       "projectType": "application",
       "prefix": "Aurora",
       "schematics": {},
@@ -13,17 +13,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/apps/aurora",
-            "index": "apps/apps/aurora/src/index.html",
-            "main": "apps/apps/aurora/src/main.ts",
-            "polyfills": "apps/apps/aurora/src/polyfills.ts",
-            "tsConfig": "apps/apps/aurora/tsconfig.app.json",
+            "outputPath": "dist/apps/aurora",
+            "index": "apps/aurora/src/index.html",
+            "main": "apps/aurora/src/main.ts",
+            "polyfills": "apps/aurora/src/polyfills.ts",
+            "tsConfig": "apps/aurora/tsconfig.app.json",
             "assets": [
-              "apps/apps/aurora/src/favicon.ico",
-              "apps/apps/aurora/src/assets"
+              "apps/aurora/src/favicon.ico",
+              "apps/aurora/src/assets"
             ],
             "styles": [
-              "apps/apps/aurora/src/styles.css"
+              "apps/aurora/src/styles.css"
             ],
             "scripts": []
           },
@@ -31,8 +31,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/apps/aurora/src/environments/environment.ts",
-                  "with": "apps/apps/aurora/src/environments/environment.prod.ts"
+                  "replace": "apps/aurora/src/environments/environment.ts",
+                  "with": "apps/aurora/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -74,17 +74,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "apps/apps/aurora/src/test.ts",
-            "polyfills": "apps/apps/aurora/src/polyfills.ts",
-            "tsConfig": "apps/apps/aurora/tsconfig.spec.json",
-            "karmaConfig": "apps/apps/aurora/karma.conf.js",
+            "main": "apps/aurora/src/test.ts",
+            "polyfills": "apps/aurora/src/polyfills.ts",
+            "tsConfig": "apps/aurora/tsconfig.spec.json",
+            "karmaConfig": "apps/aurora/karma.conf.js",
             "styles": [
-              "apps/apps/aurora/src/styles.css"
+              "apps/aurora/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "apps/apps/aurora/src/favicon.ico",
-              "apps/apps/aurora/src/assets"
+              "apps/aurora/src/favicon.ico",
+              "apps/aurora/src/assets"
             ]
           }
         },
@@ -92,8 +92,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/apps/aurora/tsconfig.app.json",
-              "apps/apps/aurora/tsconfig.spec.json"
+              "apps/aurora/tsconfig.app.json",
+              "apps/aurora/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -103,14 +103,14 @@
       }
     },
     "apps-aurora-e2e": {
-      "root": "apps/apps/aurora-e2e",
+      "root": "apps/aurora-e2e",
       "projectType": "application",
       "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "apps/apps/aurora-e2e/protractor.conf.js",
+            "protractorConfig": "apps/aurora-e2e/protractor.conf.js",
             "devServerTarget": "apps-aurora:serve"
           },
           "configurations": {
@@ -122,7 +122,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "apps/apps/aurora-e2e/tsconfig.e2e.json",
+            "tsConfig": "apps/aurora-e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]
