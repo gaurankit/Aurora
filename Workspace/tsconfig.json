@@ -16,6 +16,12 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@Aurora/component-shared": [
+        "libs/component-shared/src/index.ts"
+      ],
+      "@Aurora/material-module": [
+        "apps/aurora/src/material-module.ts"
+      ]
     }
   },
   "exclude": [
