@@ -29,6 +29,9 @@
     },
     "aurora-e2e": {
       "tags": []
+    },
+    "component-shared": {
+      "tags": []
     }
   }
 }

@@ -383,6 +383,34 @@
           }
         }
       }
+    },
+    "component-shared": {
+      "root": "libs/component-shared",
+      "sourceRoot": "libs/component-shared/src",
+      "projectType": "library",
+      "prefix": "Aurora",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/component-shared/src/test.ts",
+            "tsConfig": "libs/component-shared/tsconfig.spec.json",
+            "karmaConfig": "libs/component-shared/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/component-shared/tsconfig.lib.json",
+              "libs/component-shared/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
