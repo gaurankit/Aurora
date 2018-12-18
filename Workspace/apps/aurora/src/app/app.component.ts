@@ -6,5 +6,34 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'aurora';
+  //backgroundColor = "accent"
+
+  headerInfo =  {
+    brand: {
+      name: "ORXe 3.0",
+      icon: "menu",
+      imageUrl: "",
+      url: "/" 
+    },
+    userInfo: {
+      firstName:"John",
+      LastName: "Simth",
+      availablePoints: 20000,
+      icon : "account_circle"
+  
+    }
+  }
+
+  mainNav = [
+    {
+      title: 'Home', url: '#'
+    },
+    {
+      title: 'My Trips', url: '#'
+    },
+    {
+      title: 'My Account', url: '#'
+    }
+  ]
+
 }

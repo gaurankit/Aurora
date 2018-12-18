@@ -1,6 +1,22 @@
-<mat-toolbar color="primary">
+<mat-toolbar color='{{backgroundColor}}'>
   <mat-toolbar-row>
-    <mat-icon class="example-icon">favorite</mat-icon>
-    <span>ORXe</span>
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>{{headerInfo.brand.icon}}</mat-icon></button>
+   
+    <button (click)="_logoTapped()"  class="brandLogo" *ngIf="headerInfo.brand.imageUrl">
+      <img src="{{headerInfo.brand.imageUrl}}" alt="{{headerInfo.brand.name}}" />
+    </button>
+   
+    <span *ngIf="headerInfo.brand.name">{{headerInfo.brand.name}}</span>
+
+    <span class="spacer"></span>
+    
+    <button mat-icon-button><mat-icon>{{headerInfo.userInfo.icon}}</mat-icon></button>
+
   </mat-toolbar-row>
 </mat-toolbar>
+
+<mat-sidenav #snav>
+  <mat-nav-list>    
+      <a mat-list-item href="{{nav.url}}" *ngFor="let nav of mainNav"> {{ nav.title }} </a>
+  </mat-nav-list>
+</mat-sidenav>   

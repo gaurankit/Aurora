@@ -23,7 +23,8 @@
               "apps/aurora/src/assets"
             ],
             "styles": [
-              "apps/aurora/src/styles.css"
+              "apps/aurora/src/styles.css",              
+              "apps/aurora/src/assets/theme/base.scss"
             ],
             "scripts": []
           },
