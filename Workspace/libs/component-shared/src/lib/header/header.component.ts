@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import{ HeaderInfo } from './header.model'
 
 
@@ -10,9 +10,14 @@ import{ HeaderInfo } from './header.model'
 
 
 export class HeaderComponent implements OnInit {
+
   @Input() headerInfo: any;
   @Input() mainNav: any;
   @Input() backgroundColor: String;
+
+  @Output() open = new EventEmitter();
+
+  visible : boolean = false;
 
   constructor() {
       this.mainNav = [
@@ -20,7 +25,7 @@ export class HeaderComponent implements OnInit {
           title: 'Home', url: '#'
         },
         {
-          title: 'My Trips', url: '#'
+          title: 'My Trips', url: 'home'
         },
         {
           title: 'My Account', url: '#'
@@ -33,5 +38,8 @@ export class HeaderComponent implements OnInit {
   _logoTapped(){
     
   }
-
+  openDrawer(){
+    this.visible = !this.visible;
+    this.open.emit(this.visible);
+  }
 }
