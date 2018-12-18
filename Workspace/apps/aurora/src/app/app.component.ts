@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { MatDrawer } from '@angular/material';
 
 @Component({
   selector: 'Aurora-root',
@@ -6,7 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //backgroundColor = "accent"
+
+@ViewChild('snav') private drawer : MatDrawer
+
+  toggleSideNav(show){
+    if(show){
+      this.drawer.open();
+    }else{
+      this.drawer.close();
+    }
+  }
 
   headerInfo =  {
     brand: {
@@ -26,10 +36,10 @@ export class AppComponent {
 
   mainNav = [
     {
-      title: 'Home', url: '#'
+      title: 'Home', url: '/home'
     },
     {
-      title: 'My Trips', url: '#'
+      title: 'My Trips', url: '/'
     },
     {
       title: 'My Account', url: '#'
