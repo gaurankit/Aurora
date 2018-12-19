@@ -9,8 +9,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {MatDialogModule} from '@angular/material/dialog';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,11 +20,21 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule, MatListModule } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { SearchResultComponent } from './hotel/search-result/search-result.component';
+import { HomeComponent } from './home/home.component';
+import { SearchComponent } from './hotel/search/search.component';
+import { HotelCardComponent } from './hotel/hotel-card/hotel-card.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeNavComponent,
+    SearchResultComponent,
+    HomeComponent,
+    SearchComponent,
+    HotelCardComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +50,7 @@ import {MatInputModule} from '@angular/material/input';
     LayoutModule,
     MatButtonModule,
     MatListModule,
+    RouterModule,
     MatFormFieldModule,
     MatDialogModule,
     MatInputModule,

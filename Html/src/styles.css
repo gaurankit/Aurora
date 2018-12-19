@@ -7,7 +7,7 @@ body{
 	margin: 0px;
 }
 .mat-card{
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .home-tabs .mat-tab-label-container{
@@ -28,4 +28,26 @@ body{
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
 	width: 33.33% !important;
 	background: #fff !important;
+}
+.mat-toolbar.mat-primary{
+	font-weight: normal;
+}
+.small-btn{
+	color: #fff;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+.search-subheader .mat-form-field-appearance-legacy .mat-form-field-label{
+	color: #fff;
+	opacity: 0.54;
+	font-weight: 200;
+}
+.search-subheader .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{
+	background-image: none;
+}
+.search-subheader .mat-form-field-appearance-legacy .mat-form-field-wrapper{
+	padding: 0px;
+}
+.result-list{
+	padding:10px;
 }
