@@ -12,6 +12,10 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {NgModule} from '@angular/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import { RouterModule, Routes } from '@angular/router';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatDividerModule} from '@angular/material/divider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +29,11 @@ import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './hotel/search/search.component';
 import { HotelCardComponent } from './hotel/hotel-card/hotel-card.component';
 import { LoaderComponent } from './loader/loader.component';
+import { HomeSliderComponent } from './home-slider/home-slider.component';
+import { FooterComponent } from './footer/footer.component';
+import { FilterComponent } from './hotel/filter/filter.component';
+import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +44,10 @@ import { LoaderComponent } from './loader/loader.component';
     SearchComponent,
     HotelCardComponent,
     LoaderComponent,
+    HomeSliderComponent,
+    FooterComponent,
+    FilterComponent,
+    HotelDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,14 +61,20 @@ import { LoaderComponent } from './loader/loader.component';
     MatGridListModule,
     MatSidenavModule,
     LayoutModule,
+    MatDividerModule,
     MatButtonModule,
     MatListModule,
     RouterModule,
     MatFormFieldModule,
     MatDialogModule,
     MatInputModule,
+    MatSnackBarModule,
+    MatButtonToggleModule,
+    MatProgressBarModule,
   ],
-
+  entryComponents: [
+    FilterComponent,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
