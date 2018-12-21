@@ -1,0 +1,13 @@
+footer{
+    background: #6e00f8;
+    padding: 5px;
+}
+h3{
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    margin: 5px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    opacity: 0.67;
+}

@@ -1,0 +1,81 @@
+.card-img{
+    height: 190px;
+    margin: 10px -16px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+}
+.mat-card{
+    padding: 0 16px 16px;
+}
+.mat-subheading-2{
+    margin: 0px;
+}
+.mat-subheading-1{
+    opacity: 0.54;
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 18px;
+}
+.mat-title{
+    opacity: 0.54;
+}
+.star-rating{
+    position: absolute;
+    top: 5px;
+}
+.star-rating i{
+    color: #fff;
+    font-size: 18px;
+}
+.favorite {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.favorite i{
+    color: #fff;
+    font-size: 24px;
+}
+.mat-card-content{
+   display: flex; 
+}
+.hotel-Price .mat-subheading-2{
+    font-size: 22px;
+    color: #6e00f8;
+    line-height: 18px;
+}
+.hotel-Price .caption{
+    opacity: 0.54;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+.hotel-Price .mat-subheading-1{
+    font-size: 17px;
+    opacity: 1;
+    margin: 10px 0 0;
+    line-height: 18px;
+}
+.mat-card-content>:last-child{
+    text-align: center;
+    float: right;
+    min-width: 100px;
+}
+.hotel-title .mat-subheading-2{
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mat-card-content>:first-child, .mat-card>:first-child{
+    width:70%;
+}
+.tripadviser-icon{
+    height: 14px;;
+}
+h5.caption{
+    margin: 0px;
+    font-weight: normal;
+    opacity: 0.54;
+    letter-spacing: 0.2px;
+}
