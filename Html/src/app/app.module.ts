@@ -33,6 +33,7 @@ import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { FooterComponent } from './footer/footer.component';
 import { FilterComponent } from './hotel/filter/filter.component';
 import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.compo
     MatToolbarModule,
     MatGridListModule,
     MatSidenavModule,
+    MatExpansionModule,
     LayoutModule,
     MatDividerModule,
     MatButtonModule,
