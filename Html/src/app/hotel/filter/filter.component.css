@@ -1,0 +1,43 @@
+.mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 111;
+    background: #6200EE;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .example-icon {
+    padding: 0 8px;
+  }
+  .header-title{
+      margin-left: 20px;
+  }
+  .mat-dialog-actions {
+    padding: 0px;
+    margin: 0px;
+  }
+  .mat-button{
+    min-width: 24px;
+    padding: 0;
+  }
+  .filter-container{
+      padding:16px;
+  }
+ .mat-form-field{
+      width: 100%;
+  }
+  .mat-button-toggle{
+    margin-right: 5px;
+    width: 100%;
+    border: 1px solid #00000047;
+    border-radius: 4px;
+  }
+ .mat-button-toggle-group{
+      width:100%;
+  }
+  .mat-button-toggle-checked{
+    background: #09af00;
+    color: #fff;
+    border: 1px solid #09af00 !important;
+  }

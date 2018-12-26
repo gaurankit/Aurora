@@ -34,6 +34,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FilterComponent } from './hotel/filter/filter.component';
 import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatTabsModule,
     MatIconModule,
     MatCardModule,
+    MatSelectModule,
     MatToolbarModule,
     MatGridListModule,
     MatSidenavModule,

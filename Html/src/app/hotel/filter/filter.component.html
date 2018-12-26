@@ -1,3 +1,26 @@
-<p>
-  filter works!
-</p>
+<mat-toolbar color="primary">
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close><mat-icon>arrow_back</mat-icon></button>
+    </mat-dialog-actions>
+    <span class="header-title"> Refine</span>
+    <span class="example-spacer"></span>
+  <mat-dialog-actions>
+    <button class="small-btn" mat-dialog-close>APPLY</button>
+  </mat-dialog-actions>
+  </mat-toolbar>
+  <div class="filter-container">
+          
+  <mat-form-field>
+    <mat-select placeholder="Sort by" value="Price - low to high">
+      <mat-option value="Price - low to high">Price - low to high</mat-option>
+      <mat-option>Price - high to low</mat-option>
+      <mat-option>Nearest first</mat-option>
+      <mat-option>Star rating</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <h3 class="mat-title">I am travelling for</h3>
+  <mat-button-toggle-group>
+          <mat-button-toggle value="bold" selected>Business</mat-button-toggle>
+          <mat-button-toggle value="bold">Leisure</mat-button-toggle>
+  </mat-button-toggle-group>
+  </div>

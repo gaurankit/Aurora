@@ -68,3 +68,24 @@ body{
 .details-tabs .mat-tab-label.mat-tab-label-active {
     color: #09af00;
 }
+.filter-popup{
+	width:100%;
+	max-width: 100% !important;
+  }
+  .filter-popup .mat-dialog-container {
+    padding: 0;
+    height: 100vh;
+    border-radius: 0px;
+  }
+  .filter-popup .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    line-height: 36px;
+    padding: 0 12px;
+    font-size: 13px;
+}
+.filter-popup .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle{
+    border: 1px solid #00000047;
+}
+.filter-popup .mat-button-toggle-group-appearance-standard{
+	border-radius: 0px;
+	border:none;
+}

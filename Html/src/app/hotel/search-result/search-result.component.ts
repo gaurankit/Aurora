@@ -12,7 +12,7 @@ export class SearchResultComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
   openDialog() {
-    const dialogRef = this.dialog.open( FilterComponent );
+    const dialogRef = this.dialog.open( FilterComponent, {panelClass: 'filter-popup'});
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
