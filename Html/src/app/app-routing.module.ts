@@ -8,9 +8,11 @@ import { HotelCardComponent } from './hotel/hotel-card/hotel-card.component';
 import { LoaderComponent } from './loader/loader.component';
 import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
+import { SearchLocationComponent } from './search/search-location/search-location.component';
 const routes: Routes = [
   
   {path:'home-slider', component: HomeSliderComponent },
+  {path:'search-location', component: SearchLocationComponent },
   {path:'home', component: HomeComponent },
   {path:'hotel-details', component: HotelDetailsComponent },
   {path:'loader', component: LoaderComponent },

@@ -1,19 +1,24 @@
 <div class="search-container">
-  <mat-form-field appearance="fill">
+  <mat-form-field (click)="openDialog()">
     <mat-label>Location</mat-label>
+    <mat-icon matPrefix>location_on</mat-icon>
     <input matInput placeholder="City, Airport or Landmark" value="City, Airport or Landmark"> 
+    <mat-icon matSuffix>location_searching</mat-icon>
   </mat-form-field>
   <div class="date-container">
-    <mat-form-field appearance="fill">
+    <mat-form-field>
+      <mat-icon matPrefix>date_range</mat-icon>
       <mat-label>Check In</mat-label>
-      <input matInput placeholder="select date" value="25/01/2019"> 
+      <input matInput placeholder="select date" value="25/01/2019    -"> 
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field>
+
       <mat-label>Check Out</mat-label>
       <input matInput placeholder="select date" value="30/01/2019"> 
     </mat-form-field>
   </div>
-  <mat-form-field appearance="fill">
+  <mat-form-field>
+      <mat-icon matPrefix>person</mat-icon>  
     <mat-label>Guest</mat-label>
     <input matInput placeholder="2 Adults, 0 Child" value="2 Adults, 0 Child"> 
   </mat-form-field>

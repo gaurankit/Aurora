@@ -21,16 +21,11 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>ORXe</span>
+      <span><img src="assets/images/logo.svg" class="logo-img"></span>
       <span class="example-spacer"></span>
     <mat-icon class="example-icon">
-      <i class="material-icons">
-      share
-      </i>
-    </mat-icon>
-    <mat-icon class="example-icon">
-      <i class="material-icons">
-        search
+        <i class="material-icons">
+            account_circle
         </i>
     </mat-icon>
     </mat-toolbar>
@@ -41,6 +36,7 @@
           Flight
         </ng-template>
         <div class="search-container">
+            
             <mat-form-field appearance="fill">
               <mat-label>Location</mat-label>
               <input matInput placeholder="City, Airport or Landmark" value="City, Airport or Landmark"> 

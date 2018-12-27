@@ -80,7 +80,8 @@ body{
   .filter-popup .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
     line-height: 36px;
     padding: 0 12px;
-    font-size: 13px;
+	font-size: 13px;
+	letter-spacing: 0.5px;
 }
 .filter-popup .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle{
     border: 1px solid #00000047;
@@ -88,4 +89,26 @@ body{
 .filter-popup .mat-button-toggle-group-appearance-standard{
 	border-radius: 0px;
 	border:none;
+}
+.mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent{
+	color: #09af00;
+}
+.mat-form-field-prefix, .mat-form-field-suffix {
+    white-space: nowrap;
+    flex: none;
+    position: relative;
+	margin: 16px;
+	opacity: 0.54;
+}
+.mat-form-field-appearance-legacy .mat-form-field-infix{
+    min-height: 28px;
+  }
+.mat-autocomplete-panel{
+	max-height: 100% !important;
+}
+.search-location-popup .mat-option{
+	height: 55px;
+}
+.search-location-popup .mat-option .mat-icon{
+	opacity: 0.54;
 }

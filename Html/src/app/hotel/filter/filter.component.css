@@ -41,3 +41,17 @@
     color: #fff;
     border: 1px solid #09af00 !important;
   }
+  .mat-divider{
+      margin: 24px 0;
+  }
+  .mat-chip.mat-standard-chip.mat-chip-selected.mat-accent{
+    background: #09af00;
+  }
+  .mat-chip.mat-standard-chip {
+    background: transparent;
+    color: rgba(0,0,0,.87);
+    border-radius: 4px;
+    border: 1px solid #00000054;
+    font-weight: normal;
+    padding: 0 20px;
+}

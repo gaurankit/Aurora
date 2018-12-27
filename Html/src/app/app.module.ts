@@ -35,6 +35,10 @@ import { FilterComponent } from './hotel/filter/filter.component';
 import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSelectModule} from '@angular/material/select';
+import { StarRatingComponent } from './star-rating/star-rating.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatChipsModule} from '@angular/material/chips';
+import { SearchLocationComponent } from './search/search-location/search-location.component';
 
 
 @NgModule({
@@ -50,6 +54,8 @@ import {MatSelectModule} from '@angular/material/select';
     FooterComponent,
     FilterComponent,
     HotelDetailsComponent,
+    StarRatingComponent,
+    SearchLocationComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,8 +63,10 @@ import {MatSelectModule} from '@angular/material/select';
     AppRoutingModule,
     MatCheckboxModule,
     MatTabsModule,
+    MatChipsModule,
     MatIconModule,
     MatCardModule,
+    MatTooltipModule,
     MatSelectModule,
     MatToolbarModule,
     MatGridListModule,
@@ -67,6 +75,7 @@ import {MatSelectModule} from '@angular/material/select';
     LayoutModule,
     MatDividerModule,
     MatButtonModule,
+    MatAutocompleteModule,
     MatListModule,
     RouterModule,
     MatFormFieldModule,
