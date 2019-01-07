@@ -112,3 +112,16 @@ p{
 .policies-details img{
     width: 100%;
 }
+.select-room-link{
+    position: absolute;
+    top: 0;
+    height: 49px;
+    left: 33%;
+    width: 33.33%;
+    background: red;
+    z-index: 999;
+    opacity: 0;
+}
+.details-tabs{
+    position: relative;
+}

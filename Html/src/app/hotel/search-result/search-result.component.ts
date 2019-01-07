@@ -27,9 +27,9 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("filter-tabs").style.bottom = "0";
+    document.getElementById('filter-tabs').style.bottom = "0";
   } else {
-    document.getElementById("filter-tabs").style.bottom = "-50px";
+    document.getElementById('filter-tabs').style.bottom = "-50px";
   }
   prevScrollpos = currentScrollPos;
 }

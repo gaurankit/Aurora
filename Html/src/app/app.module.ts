@@ -39,6 +39,7 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatChipsModule} from '@angular/material/chips';
 import { SearchLocationComponent } from './search/search-location/search-location.component';
+import { RoomDetailComponent } from './hotel/room-detail/room-detail.component';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { SearchLocationComponent } from './search/search-location/search-locatio
     HotelDetailsComponent,
     StarRatingComponent,
     SearchLocationComponent,
+    RoomDetailComponent,
   ],
   imports: [
     BrowserModule,

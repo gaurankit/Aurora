@@ -9,9 +9,11 @@ import { LoaderComponent } from './loader/loader.component';
 import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
 import { SearchLocationComponent } from './search/search-location/search-location.component';
+import { RoomDetailComponent } from './hotel/room-detail/room-detail.component';
 const routes: Routes = [
   
   {path:'home-slider', component: HomeSliderComponent },
+  {path:'room-detail', component: RoomDetailComponent },
   {path:'search-location', component: SearchLocationComponent },
   {path:'home', component: HomeComponent },
   {path:'hotel-details', component: HotelDetailsComponent },
