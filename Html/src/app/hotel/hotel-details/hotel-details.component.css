@@ -125,3 +125,25 @@ p{
 .details-tabs{
     position: relative;
 }
+.review-wrapper .tripadviser-icon{
+    height: 15px;
+}
+.review-wrapper{
+    padding: 16px;
+    float: left;
+}
+.review-wrapper .mat-body-2{
+    margin-bottom: 5px;
+}
+.review-wrapper .mat-body-1{
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+.review-wrapper .mat-small{
+    font-size: 13px;
+    margin-bottom: 10px;
+    opacity: 0.54;
+}
+.mat-divider{
+    clear: both;
+}
