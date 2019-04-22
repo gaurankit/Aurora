@@ -1,0 +1,18 @@
+{
+  "npmScope": "npmscope",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "auroraui": {
+      "tags": []
+    },
+    "auroraui-e2e": {
+      "tags": []
+    }
+  }
+}
