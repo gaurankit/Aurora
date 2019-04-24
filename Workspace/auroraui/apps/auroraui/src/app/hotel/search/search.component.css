@@ -1,0 +1,18 @@
+.date-container .mat-form-field{
+    width: 50%;
+  }
+  .search-container button{
+      width: 100%;
+      font-weight: normal;
+      letter-spacing: 1px;
+      background: #09af00;
+  }
+  .mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: #fff;
+  }
+  .search-container{
+    padding: 10px;
+  }
+  .mat-form-field{
+    width: 100%;
+  }

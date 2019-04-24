@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+  <mat-icon routerLink="/home">arrow_back</mat-icon>
+  <span class="header-title"> Las Vegas, NV</span>
+  <span class="example-spacer"></span>
+  <button class="small-btn">MODIFY</button>
+</mat-toolbar>
+<div class="search-subheader">
+  <div class="date-container">
+    <mat-form-field appearance="legacy">
+      <mat-label>Check In</mat-label>
+      <input matInput placeholder="select date" value="25/01/2019" disabled> 
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Check Out</mat-label>
+      <input matInput placeholder="select date" value="30/01/2019" disabled> 
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Guest</mat-label>
+      <input matInput placeholder="2 Adults, 0 Child" value="2 Adults, 0 Child" disabled> 
+    </mat-form-field>
+  </div>
+</div>
+<div class="result-list">
+  <h1 class="mat-title">Showing 296 Properties</h1>
+  <hotel-card></hotel-card>
+  <hotel-card></hotel-card>
+  <hotel-card></hotel-card>
+  <hotel-card></hotel-card>
+  <hotel-card></hotel-card>
+  <hotel-card></hotel-card>
+  <hotel-card></hotel-card>
+  <hotel-card></hotel-card>
+  <hotel-card></hotel-card>
+  <hotel-card></hotel-card>
+</div>
+
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style" id="filter-tabs">
+    <mat-button-toggle value="bold">
+        <mat-icon class="price">compare_arrows</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="italic">
+        <mat-icon mat-raised-button (click)="openDialog()">filter_list</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="underline">
+        <mat-icon>place</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>

@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,body{
+	height: 100%;
+}
+body{
+	margin: 0px;
+}
+.mat-card{
+	margin-bottom: 10px;
+}
+
+.home-tabs .mat-tab-label-container{
+	    background: #6200EE;
+}
+.home-tabs .mat-tab-label{
+    height: 80px;
+    width: 33.33%;
+    align-items: flex-end;
+    padding-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+ 	letter-spacing: 1px;
+ 	font-size: 13px;
+    font-weight: normal;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+	width: 33.33% !important;
+	background: #fff !important;
+}
+.mat-toolbar.mat-primary{
+	font-weight: normal;
+}
+.small-btn{
+	color: #fff;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+.search-subheader .mat-form-field-appearance-legacy .mat-form-field-label{
+	color: #fff;
+	opacity: 0.54;
+	font-weight: 200;
+}
+.search-subheader .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{
+	background-image: none;
+}
+.search-subheader .mat-form-field-appearance-legacy .mat-form-field-wrapper{
+	padding: 0px;
+}
+.result-list{
+	padding:10px;
+}
+.mat-progress-bar-buffer {
+	background-color: #6b4be8;
+}
+.mat-progress-bar-fill::after {
+    background-color: #09af00;
+}
+.details-tabs .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    width: 33.33% !important;
+    background: #09af00 !important;
+}
+.details-tabs .mat-tab-label {
+    width: 33.33%;
+}
+
+.details-tabs .mat-tab-label.mat-tab-label-active {
+    color: #09af00;
+}
+.filter-popup{
+	width:100%;
+	max-width: 100% !important;
+  }
+  .filter-popup .mat-dialog-container {
+    padding: 0;
+    height: 100vh;
+    border-radius: 0px;
+  }
+  .filter-popup .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    line-height: 36px;
+    padding: 0 12px;
+	font-size: 13px;
+	letter-spacing: 0.5px;
+}
+.filter-popup .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle{
+    border: 1px solid #00000047;
+}
+.filter-popup .mat-button-toggle-group-appearance-standard{
+	border-radius: 0px;
+	border:none;
+}
+.mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent{
+	color: #09af00;
+}
+.mat-form-field-prefix, .mat-form-field-suffix {
+    white-space: nowrap;
+    flex: none;
+    position: relative;
+	margin: 16px;
+	opacity: 0.54;
+}
+.mat-form-field-appearance-legacy .mat-form-field-infix{
+    min-height: 28px;
+  }
+.mat-autocomplete-panel{
+	max-height: 100% !important;
+}
+.search-location-popup .mat-option{
+	height: 55px;
+}
+.search-location-popup .mat-option .mat-icon{
+	opacity: 0.54;
+}

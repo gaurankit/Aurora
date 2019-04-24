@@ -1,0 +1,26 @@
+<div class="search-container">
+  <mat-form-field (click)="openDialog()">
+    <mat-label>Location</mat-label>
+    <mat-icon matPrefix>location_on</mat-icon>
+    <input matInput placeholder="City, Airport or Landmark"> 
+    <mat-icon matSuffix>location_searching</mat-icon>
+  </mat-form-field>
+  <div class="date-container">
+    <mat-form-field>
+      <mat-icon matPrefix>date_range</mat-icon>
+      <mat-label>Check In</mat-label>
+      <input matInput placeholder="select date"> 
+    </mat-form-field>
+    <mat-form-field>
+      <mat-icon matPrefix>date_range</mat-icon>
+      <mat-label>Check Out</mat-label>
+      <input matInput placeholder="select date"> 
+    </mat-form-field>
+  </div>
+  <mat-form-field>
+      <mat-icon matPrefix>person</mat-icon>  
+    <mat-label>Guest</mat-label>
+    <input matInput placeholder="0 Adults, 0 Child"> 
+  </mat-form-field>
+  <button mat-flat-button color="primary" routerLink="/loader">SEARCH HOTEL</button>
+</div>

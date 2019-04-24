@@ -1,0 +1,98 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar></mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">My bookings</a>
+      <a mat-list-item href="#">My account</a>
+      <a mat-list-item href="#">Terms & Conditions </a>
+      <a mat-list-item href="#">Privacy Policy</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span><img src="assets/images/logo.svg" class="logo-img"></span>
+      <span class="example-spacer"></span>
+    <mat-icon class="example-icon">
+        <i class="material-icons">
+            account_circle
+        </i>
+    </mat-icon>
+    </mat-toolbar>
+    <mat-tab-group class="home-tabs">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">hotels</mat-icon>
+            Hotel
+          </ng-template>
+        <hotel-search></hotel-search>
+      </mat-tab>
+      
+      <mat-tab >
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">flight</mat-icon>
+          Flight
+        </ng-template>
+        <div class="search-container">
+            
+            <mat-form-field appearance="fill">
+              <mat-label>Location</mat-label>
+              <input matInput placeholder="City, Airport or Landmark"> 
+            </mat-form-field>
+            <div class="date-container">
+              <mat-form-field appearance="fill">
+                <mat-label>Check In</mat-label>
+                <input matInput placeholder="select date"> 
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Check Out</mat-label>
+                <input matInput placeholder="select date"> 
+              </mat-form-field>
+            </div>
+            <mat-form-field appearance="fill">
+              <mat-label>Guest</mat-label>
+              <input matInput placeholder="0 Adults, 0 Child"> 
+            </mat-form-field>
+            <button mat-flat-button color="primary">SEARCH FLIGHT</button>
+        </div>
+        
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">directions_car</mat-icon>
+          Car
+        </ng-template>
+        <div class="search-container">
+            <div class="date-container">
+              <mat-form-field appearance="fill">
+                <mat-label>Check In</mat-label>
+                <input matInput placeholder="select date"> 
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Check Out</mat-label>
+                <input matInput placeholder="select date"> 
+              </mat-form-field>
+            </div>
+            <mat-form-field appearance="fill">
+              <mat-label>Guest</mat-label>
+              <input matInput placeholder="0 Adults, 0 Child"> 
+            </mat-form-field>
+            <button mat-flat-button color="primary">SEARCH CAR</button>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    <home-slider></home-slider>
+    <home-footer></home-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
