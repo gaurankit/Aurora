@@ -40,6 +40,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatChipsModule} from '@angular/material/chips';
 import { SearchLocationComponent } from './search/search-location/search-location.component';
 import { RoomDetailComponent } from './hotel/room-detail/room-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AppMaterialModule } from './modules/app-material/app-material.module';
 
 
 @NgModule({
@@ -86,6 +89,9 @@ import { RoomDetailComponent } from './hotel/room-detail/room-detail.component';
     MatSnackBarModule,
     MatButtonToggleModule,
     MatProgressBarModule,
+    HttpClientModule,
+    FormsModule,
+    AppMaterialModule
   ],
   entryComponents: [
     FilterComponent,
@@ -94,3 +100,59 @@ import { RoomDetailComponent } from './hotel/room-detail/room-detail.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+// import { NgModule } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
+// import { AppMaterialModule } from './modules/app-material/app-material.module';
+// import { AppComponent } from './app.component';
+
+
+// import { AppRoutingModule } from './app-routing.module';
+// import { HomeNavComponent } from './home-nav/home-nav.component';
+// import { LayoutModule } from '@angular/cdk/layout';
+// import { SearchResultComponent } from './hotel/search-result/search-result.component';
+// import { HomeComponent } from './home/home.component';
+// import { SearchComponent } from './hotel/search/search.component';
+// import { HotelCardComponent } from './hotel/hotel-card/hotel-card.component';
+// import { LoaderComponent } from './loader/loader.component';
+// import { HomeSliderComponent } from './home-slider/home-slider.component';
+// import { FooterComponent } from './footer/footer.component';
+// import { FilterComponent } from './hotel/filter/filter.component';
+// import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
+// import { StarRatingComponent } from './star-rating/star-rating.component';
+// import { SearchLocationComponent } from './search/search-location/search-location.component';
+// import { RoomDetailComponent } from './hotel/room-detail/room-detail.component';
+
+
+
+
+// @NgModule({
+//   declarations: [
+//     AppComponent,
+//     HomeNavComponent,
+//     SearchResultComponent,
+//     HomeComponent,
+//     SearchComponent,
+//     HotelCardComponent,
+//     LoaderComponent,
+//     HomeSliderComponent,
+//     FooterComponent,
+//     FilterComponent,
+//     HotelDetailsComponent,
+//     StarRatingComponent,
+//     SearchLocationComponent,
+//     RoomDetailComponent,
+//   ],
+//   imports: [
+//     FormsModule,
+//     AppMaterialModule
+//     ],
+//   providers: [],
+//   bootstrap: [AppComponent],
+//   entryComponents: [AppComponent]
+// })
+// export class AppModule {
+
+//   constructor(){}
+// }
