@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material';
 import { SearchLocationComponent } from '../../search/search-location/search-location.component';
+import { Router } from '@angular/router';
+import {HotelSearchRequest} from '../../modules/Entities/hotel/request/hotel-search';
+import {SearchService} from '../../services/search-service';
 
 @Component({
   selector: 'hotel-search',
@@ -10,7 +13,13 @@ import { SearchLocationComponent } from '../../search/search-location/search-loc
 
 export class SearchComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+
+  private sessionId: string;
+  public hotelSearchRequest: HotelSearchRequest;
+
+  constructor(public dialog: MatDialog,private router: Router, private searchService: SearchService) { 
+    this.hotelSearchRequest = new HotelSearchRequest();
+  }
   openDialog() {
     const dialogRef = this.dialog.open( SearchLocationComponent, {panelClass: 'filter-popup'});
 
@@ -19,7 +28,24 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  ngOnInit() { 
   }
 
+  private initSearch = (postData) => {
+    console.log("Hotel init search fired.");
+    console.log(postData);
+    this.searchService.searchInit(postData).subscribe(response => { 
+      console.log(response);
+      console.log("Hotel init Response - "+ response['sessionId']);
+      this.sessionId = response['sessionId'];
+      localStorage.setItem("HotelInitSessionId",this.sessionId);
+      this.router.navigate(['/loader'], { queryParams: { sessionId: this.sessionId} });
+    });
+  }
+  
+  hotelInitSearch(): void {
+    const searchRequest = this.hotelSearchRequest.toServiceModel();
+    //searchRequest.passengers =  searchRequest.passengers.filter(passenger => passenger.count !== 0);
+    this.initSearch(searchRequest);
+  }
 }
