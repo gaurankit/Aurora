@@ -1,6 +1,33 @@
+// {
+//   "compileOnSave": false,
+//   "compilerOptions": {
+//     "outDir": "./dist/out-tsc",
+//     "sourceMap": true,
+//     "declaration": false,
+//     "moduleResolution": "node",
+//     "emitDecoratorMetadata": true,
+//     "experimentalDecorators": true,
+//     "importHelpers": true,
+//     "target": "es5",
+//     "module": "es2015",
+//     "typeRoots": ["node_modules/@types"],
+//     "lib": ["es2017", "dom"],
+//     "skipLibCheck": true,
+//     "skipDefaultLibCheck": true,
+//     "baseUrl": ".",
+//     "resolveJsonModule": true,
+//     "paths": {
+//       "@Orxe/*" : ["app/*"],
+//       "@Orxe/Core/*" : ["app/core/Utilities/*"]
+//     }
+//   },
+//   "exclude": ["node_modules", "tmp"]
+// }
+
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
@@ -9,12 +36,18 @@
     "importHelpers": true,
     "target": "es5",
     "module": "es2015",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {}
-  },
-  "exclude": ["node_modules", "tmp"]
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "baseUrl": "src",
+    "resolveJsonModule": true,
+    "paths": {
+      "@Orxe/*" : ["app/*"],
+      "@Orxe/Core/*" : ["app/core/Utilities/*"]
+    }
+  }
 }

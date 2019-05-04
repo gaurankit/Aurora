@@ -8,8 +8,8 @@
 
 export const environment = {
   production: false,
-  isMockEnabled: true,
-  flightServiceBaseUrl: '/api/air/v1.0/',
+  isMockEnabled: false,
+  hotelServiceBaseUrl: 'https://stage.cnxloyalty.com/hotel/v1.0/',
   relayApiUrl: 'https://ynfgwlehnb.execute-api.us-east-1.amazonaws.com/Prod/api/Relay',
   mockUrl: './../assets/mock/',
   useRelayApi: false,
