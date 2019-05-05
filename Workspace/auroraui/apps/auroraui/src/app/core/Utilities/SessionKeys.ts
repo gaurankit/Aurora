@@ -1,4 +1,6 @@
 
 export const SessionKeys = {
-  HotelInitSessionId: "HotelInitSessionId"
+  HotelInitSessionId: "HotelInitSessionId",
+  HotelResultCount:"HotelResultCount",
+  HotelResultResponse:"HotelResultResponse"
 };

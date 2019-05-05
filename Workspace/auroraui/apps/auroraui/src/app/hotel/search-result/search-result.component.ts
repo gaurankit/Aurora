@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material';
 import { FilterComponent } from '../filter/filter.component';
+import {StorageService} from '@Orxe/services'
+import {SessionKeys} from '@Orxe/Core';
 
 
 @Component({
@@ -10,7 +12,11 @@ import { FilterComponent } from '../filter/filter.component';
 })
 export class SearchResultComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  hotelCount;
+
+  constructor(public dialog: MatDialog,private storageService:StorageService) {
+    
+   }
   openDialog() {
     const dialogRef = this.dialog.open( FilterComponent, {panelClass: 'filter-popup'});
 
@@ -20,6 +26,7 @@ export class SearchResultComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.hotelCount = this.storageService.get(SessionKeys.HotelResultCount);
   }
 
 }

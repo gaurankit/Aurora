@@ -3,7 +3,8 @@ import {MatDialog} from '@angular/material';
 import { SearchLocationComponent } from '../../search/search-location/search-location.component';
 import { Router } from '@angular/router';
 import {HotelSearchRequest} from '../../modules/Entities/hotel/request/hotel-search';
-import {SearchService} from '../../services/search-service';
+import {SearchService, StorageService} from '@Orxe/services';
+import {SessionKeys} from '@Orxe/Core';
 
 @Component({
   selector: 'hotel-search',
@@ -17,7 +18,7 @@ export class SearchComponent implements OnInit {
   private sessionId: string;
   public hotelSearchRequest: HotelSearchRequest;
 
-  constructor(public dialog: MatDialog,private router: Router, private searchService: SearchService) { 
+  constructor(public dialog: MatDialog,private router: Router, private searchService: SearchService, private storageService:StorageService) { 
     this.hotelSearchRequest = new HotelSearchRequest();
   }
   openDialog() {
@@ -38,7 +39,7 @@ export class SearchComponent implements OnInit {
       console.log(response);
       console.log("Hotel init Response - "+ response['sessionId']);
       this.sessionId = response['sessionId'];
-      localStorage.setItem("HotelInitSessionId",this.sessionId);
+      this.storageService.set(SessionKeys.HotelInitSessionId,this.sessionId);
       this.router.navigate(['/loader'], { queryParams: { sessionId: this.sessionId} });
     });
   }

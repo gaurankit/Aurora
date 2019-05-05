@@ -45,7 +45,8 @@ export class LoaderComponent implements OnInit {
   getResults(postData){
     console.log(postData);
     this.searchService.getResults(postData,"").subscribe(hotelResultresponse=>{
-      console.log(hotelResultresponse);
+      console.log(JSON.stringify(hotelResultresponse));
+      this.storageService.set(SessionKeys.HotelResultResponse,JSON.stringify(hotelResultresponse));
       this.router.navigate(['/search-result']);
     });
   }
@@ -57,6 +58,7 @@ export class LoaderComponent implements OnInit {
       this.statusResponse = resultStatus;
       if ( this.statusResponse.status === 'Complete' && this.statusResponse.hotelCount > 0) {
         console.log(this.statusResponse);
+        this.storageService.set(SessionKeys.HotelResultCount,this.statusResponse.hotelCount.toString());
         console.log("Result Complete");
         this.getHotelResult();
       } else if (this.statusResponse.status === 'InProgress') {
@@ -64,7 +66,7 @@ export class LoaderComponent implements OnInit {
          setTimeout(() => 
               {
                 this.getResultsStatus(postData);
-              },4000);
+              },2000);
       } else if (this.statusResponse.status !== 'InProgress' && this.statusResponse.hotelCount === 0) {
         console.log("Search InProgress & Hotel Count is 0.");
       }

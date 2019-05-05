@@ -14,20 +14,15 @@ export class HotelSearchRequest {
          }
       ],
       "stayPeriod": {
-         "start": "2019-05-30",
-         "end": "2019-06-02"
+         "start": "2019-06-30",
+         "end": "2019-07-02"
       },
       "filters": {
          "minHotelPrice": 1,
          "maxHotelPrice": 10000,
          "minHotelRating": 1,
          "maxHotelRating": 5,
-         "hotelChains": [
-            "Novotel",
-            "Marriott",
-            "Hilton",
-            "Accor"
-         ],
+         "hotelChains": [],
          "allowedCountry": "FR"
       },
       "travellerCountryCodeOfResidence": "US",

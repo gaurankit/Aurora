@@ -1,32 +1,45 @@
-<mat-card class="example-card" routerLink="/hotel-details">
-    <mat-icon class="star-rating">
-        <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i>
+<mat-card *ngFor="let hotel of hotelList" class="example-card" routerLink="/hotel-details">
+      <mat-icon class="star-rating" *ngIf="hotel.rating==1">
+          <i  class="material-icons">star</i>
+      </mat-icon>
+      <mat-icon class="star-rating" *ngIf="hotel.rating==2">
+        <i  class="material-icons">star</i><i class="material-icons">star</i>
     </mat-icon>
+    <mat-icon class="star-rating" *ngIf="hotel.rating==3">
+      <i  class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i>
+  </mat-icon>
+  <mat-icon class="star-rating" *ngIf="hotel.rating==4">
+    <i  class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i>
+  </mat-icon>
+  <mat-icon class="star-rating" *ngIf="hotel.rating==5">
+    <i  class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i>
+  </mat-icon>
     <mat-icon class="favorite">
         <i class="material-icons">favorite</i>
     </mat-icon>
-  <div class="card-img" style="background-image : url('../../assets/images/hotel-img-01.jpg')">
+  <div class="card-img">
+    <img style="width: 414px;height: 190px;" src="{{hotel.images[0].URL}}"/>
   </div>
   <mat-card-content>
     <div class="hotel-title">
         <h4 class="mat-subheading-2">
-            Holiday Inn Express Poughkeepsie
+           {{hotel.name}}
           </h4>
           <h4 class="mat-subheading-1">
-              Montelago Blv
+              {{hotel.contact.address.line1}}
           </h4>
           <img class="tripadviser-icon" src="assets/images/tripadviser.png">
-          <h5 class="caption">19450 reviews</h5>
+          <h5 class="caption">{{hotel.id}} reviews</h5>
     </div>
     <div class="hotel-Price">
           <h4 class="mat-subheading-2">
-            49200<sup>*</sup>
+            {{genratePoints(hotel.fare.totalFare)}}
           </h4>
           <span class="caption">Pts/night</span>
           <h4 class="mat-subheading-1">
-              $220
+            ${{hotel.fare.totalFare}}
           </h4>
-          <span class="caption">USD Avg/night</span>
+          <span class="caption">Avg/night</span>
     </div>
   </mat-card-content>
 </mat-card>
