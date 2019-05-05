@@ -1,4 +1,4 @@
-<mat-card *ngFor="let hotel of hotelList" class="example-card" routerLink="/hotel-details">
+<mat-card *ngFor="let hotel of hotelList" class="example-card" (click)="goToHotelDetails(hotel.id);" id="{{hotel.id}}">
       <mat-icon class="star-rating" *ngIf="hotel.rating==1">
           <i  class="material-icons">star</i>
       </mat-icon>

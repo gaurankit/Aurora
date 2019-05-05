@@ -23,7 +23,7 @@ export class HotelSearchRequest {
          "minHotelRating": 1,
          "maxHotelRating": 5,
          "hotelChains": [],
-         "allowedCountry": "FR"
+         "allowedCountry": "US"
       },
       "travellerCountryCodeOfResidence": "US",
       "travellerNationalityCode": "US",
@@ -31,8 +31,8 @@ export class HotelSearchRequest {
       "bounds": {
          "circle": {
             "center": {
-               "lat": 49.0097,
-               "long": 2.5479
+               "lat": 36.086010,
+               "long": -115.153969
             },
             "radiusKm": 50.5
          }

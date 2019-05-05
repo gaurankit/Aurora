@@ -46,7 +46,6 @@ export class SearchComponent implements OnInit {
   
   hotelInitSearch(): void {
     const searchRequest = this.hotelSearchRequest.toServiceModel();
-    //searchRequest.passengers =  searchRequest.passengers.filter(passenger => passenger.count !== 0);
     this.initSearch(searchRequest);
   }
 }

@@ -14,7 +14,8 @@ export class HotelSearchResultRequest {
            "currency": "USD",
            "contentPrefs": [
               "Basic",
-              "images"
+              "images",
+              "descriptions"
            ],
            "filters": {
               "minHotelPrice": 1,
@@ -22,7 +23,7 @@ export class HotelSearchResultRequest {
               "minHotelRating": 1,
               "maxHotelRating": 5,
               "hotelChains": [],
-              "allowedCountry": "FR"
+              "allowedCountry": "US"
            }
           };
       return serviceModel;
