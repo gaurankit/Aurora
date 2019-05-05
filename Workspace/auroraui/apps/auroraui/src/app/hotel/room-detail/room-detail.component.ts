@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {SearchService, StorageService} from '@Orxe/services'
+import {SessionKeys} from '@Orxe/Core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-room-detail',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomDetailComponent implements OnInit {
 
-  constructor() { }
+  roomResponse;
+
+  constructor(private storageService : StorageService,private router: Router) { }
 
   ngOnInit() {
+    const roomResponse = this.storageService.get(SessionKeys.HotelRoomsResponse);
+    this.roomResponse = JSON.parse(roomResponse);
   }
 
+  genratePoints(dollerAmount): number {
+    let amount = parseFloat(dollerAmount);
+    return amount * 100;
+  }
+
+  genrateOffer(dollerAmount): number {
+    let amount = parseInt(dollerAmount);
+    return amount + 100;
+  }
 }

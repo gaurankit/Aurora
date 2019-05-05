@@ -18,7 +18,6 @@ export class HotelCardComponent implements OnInit {
     const sessionValue = this.storageService.get(SessionKeys.HotelResultResponse);
     this.hotelList=JSON.parse(sessionValue).hotels;
     console.log("Result Hotel List");
-    console.log(this.hotelList);
   }
 
   genratePoints(dollerAmount): number {

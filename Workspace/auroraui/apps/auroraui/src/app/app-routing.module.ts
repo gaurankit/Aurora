@@ -10,6 +10,8 @@ import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
 import { SearchLocationComponent } from './search/search-location/search-location.component';
 import { RoomDetailComponent } from './hotel/room-detail/room-detail.component';
+import { RoomLoaderComponent } from './room-loader/roomloader.component';
+
 const routes: Routes = [
   
   {path:'home-slider', component: HomeSliderComponent },
@@ -18,6 +20,7 @@ const routes: Routes = [
   {path:'home', component: HomeComponent },
   {path:'hotel-details', component: HotelDetailsComponent },
   {path:'loader', component: LoaderComponent },
+  {path:'roomloader', component: RoomLoaderComponent },
   {path:'search-result', component: SearchResultComponent },
   {path:'hotel-card', component: HotelCardComponent },
   {path:'', redirectTo: 'home',  pathMatch: 'full'},

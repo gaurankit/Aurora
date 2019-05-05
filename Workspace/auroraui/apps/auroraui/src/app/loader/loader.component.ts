@@ -4,6 +4,7 @@ import {HotelSearchStatusRequest} from '../modules/Entities/hotel/request/hotel-
 import {HotelSearchResultRequest} from '../modules/Entities/hotel/request/hotel-result';
 import {SearchService, StorageService} from '@Orxe/services'
 import {SessionKeys} from '@Orxe/Core';
+import {GetStatusResponse} from '../modules/Entities/hotel/request/getStatus-response'; 
 
 @Component({
   selector: 'app-loader',
@@ -16,7 +17,7 @@ export class LoaderComponent implements OnInit {
   correlationId : string = "";
   public hotelSearchStatusRequest: HotelSearchStatusRequest;
   public hotelSearchResultRequest: HotelSearchResultRequest;
-  statusResponse = {} as ORXe_Hotel_Response.GetStatusResponse;
+  statusResponse = {} as GetStatusResponse;
 
   constructor(private router: Router, private searchService: SearchService, private storageService : StorageService) { 
     this.hotelSearchStatusRequest = new HotelSearchStatusRequest();
@@ -36,7 +37,7 @@ export class LoaderComponent implements OnInit {
 
   getHotelResult() {
     console.log("GetHotelResult Called.");
-    this.sessionId = localStorage.getItem("HotelInitSessionId");
+    this.sessionId = this.storageService.get(SessionKeys.HotelInitSessionId);
     const resultRequest = this.hotelSearchResultRequest.toServiceModel();
     resultRequest.sessionId=this.sessionId;
     this.getResults(resultRequest);
@@ -45,7 +46,6 @@ export class LoaderComponent implements OnInit {
   getResults(postData){
     console.log(postData);
     this.searchService.getResults(postData,"").subscribe(hotelResultresponse=>{
-      console.log(JSON.stringify(hotelResultresponse));
       this.storageService.set(SessionKeys.HotelResultResponse,JSON.stringify(hotelResultresponse));
       this.router.navigate(['/search-result']);
     });
@@ -54,7 +54,7 @@ export class LoaderComponent implements OnInit {
   getResultsStatus(postData) {
     console.log("SessionID: - "+ this.sessionId);
     this.searchService.getStatus(postData, this.correlationId)
-    .subscribe((resultStatus: ORXe_Hotel_Response.GetStatusResponse) => { 
+    .subscribe((resultStatus: GetStatusResponse) => { 
       this.statusResponse = resultStatus;
       if ( this.statusResponse.status === 'Complete' && this.statusResponse.hotelCount > 0) {
         console.log(this.statusResponse);

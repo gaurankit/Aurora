@@ -43,6 +43,7 @@ import { RoomDetailComponent } from './hotel/room-detail/room-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppMaterialModule } from './modules/app-material/app-material.module';
+import { RoomLoaderComponent } from './room-loader/roomloader.component';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { AppMaterialModule } from './modules/app-material/app-material.module';
     StarRatingComponent,
     SearchLocationComponent,
     RoomDetailComponent,
+    RoomLoaderComponent
   ],
   imports: [
     BrowserModule,

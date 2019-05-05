@@ -5,35 +5,25 @@
     <span class="header-title"> Select room</span>
     <span class="example-spacer"></span>
   </mat-toolbar>
-  <mat-divider></mat-divider>
-  <div class="room-detail-card">
-      <i class="material-icons right">
-            keyboard_arrow_right
-      </i>
-      <div class="mat-body-2">Traditional room</div>
-      <div class="mat-body-1">Resort view | 1 King bed | 376 Sqaure feet</div>
-      <div class="discount-bar"><div class="mat-body-1">Book early and save 15%<sup>*</sup></div></div>
-      <div class="room-slider">
-          <img src="assets/images/room-slider-03.png">
-          <img src="assets/images/room-slider-02.png">
-          <img src="assets/images/room-slider-03.png">
-          <img src="assets/images/room-slider-04.png">
-          <img src="assets/images/room-slider-05.png">
-          <img src="assets/images/room-slider-06.png">
-          <img src="assets/images/room-slider-07.png">
-          <img src="assets/images/room-slider-08.png">
-          <img src="assets/images/room-slider-09.png">
-          <img src="assets/images/room-slider-10.png">
-          <img src="assets/images/room-slider-11.png">
-          <img src="assets/images/room-slider-12.png">
-          <img src="assets/images/room-slider-13.png">
-        </div>
-        <div class="mat-h1">49424<sup>*</sup><span>Pts or</span></div>
-        <div class="mat-h2"><del>$1395</del>$1250<span>USD for 3 nights</span></div>
-        <button mat-raised-button color="accent">BOOK</button>
-        <div class="mat-body-1">Resort fee for USD 41.86 will be charged by hotel</div>
-    </div>
+  <div *ngFor="let room of roomResponse.rooms; let i = index">
     <mat-divider></mat-divider>
+    <div  class="room-detail-card">
+        <i class="material-icons right">
+                keyboard_arrow_right
+        </i>
+        <div class="mat-body-2">{{room.name}}</div>
+        <div class="mat-body-1">{{room.name}}</div>
+        <div class="discount-bar"><div class="mat-body-1">Book early and save 15%<sup>*</sup></div></div>
+        <div class="room-slider">
+            <img *ngFor="let image of roomResponse.hotel.images" src="{{image.URL}}">
+            </div>
+            <div class="mat-h1">{{genratePoints(roomResponse.rates[i].totalFare)}}<sup>*</sup><span>Pts or</span></div>
+            <div class="mat-h2"><del>${{genrateOffer(roomResponse.rates[i].totalFare)}}</del>${{roomResponse.rates[i].totalFare}}<span> for 3 nights</span></div>
+            <button mat-raised-button color="accent">BOOK</button>
+            <div class="mat-body-1">Resort fee for USD 41.86 will be charged by hotel</div>
+        </div>
+    </div>
+    <!-- <mat-divider></mat-divider>
     <div class="room-detail-card">
         <i class="material-icons right">
             keyboard_arrow_right
@@ -284,5 +274,5 @@
             <div class="mat-h2"><del>$1395</del>$1250<span>USD for 3 nights</span></div>
             <button mat-raised-button color="accent">BOOK</button>
             <div class="mat-body-1">Resort fee for USD 41.86 will be charged by hotel</div>
-        </div>
+        </div> -->
 <home-footer></home-footer>
