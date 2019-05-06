@@ -44,6 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppMaterialModule } from './modules/app-material/app-material.module';
 import { RoomLoaderComponent } from './room-loader/roomloader.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -94,7 +96,8 @@ import { RoomLoaderComponent } from './room-loader/roomloader.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   entryComponents: [
     FilterComponent,

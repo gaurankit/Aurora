@@ -20,9 +20,12 @@
             "tsConfig": "apps/auroraui/tsconfig.app.json",
             "assets": [
               "apps/auroraui/src/favicon.ico",
-              "apps/auroraui/src/assets"
+              "apps/auroraui/src/assets",
+              "apps/auroraui/src/manifest.json"
             ],
-            "styles": ["apps/auroraui/src/styles.css"],
+            "styles": [
+              "apps/auroraui/src/styles.css"
+            ],
             "scripts": [],
             "es5BrowserSupport": true
           },
@@ -49,7 +52,9 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/auroraui/ngsw-config.json"
             }
           }
         },
@@ -77,7 +82,9 @@
               "apps/auroraui/tsconfig.app.json",
               "apps/auroraui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -112,7 +119,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/auroraui-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
