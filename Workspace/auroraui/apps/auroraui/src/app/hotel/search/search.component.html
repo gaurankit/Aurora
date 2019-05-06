@@ -2,25 +2,27 @@
   <mat-form-field (click)="openDialog()">
     <mat-label>Location</mat-label>
     <mat-icon matPrefix>location_on</mat-icon>
-    <input matInput placeholder="City, Airport or Landmark"> 
+    <input matInput placeholder="City, Airport or Landmark" value="{{locationName}}"/>
     <mat-icon matSuffix>location_searching</mat-icon>
   </mat-form-field>
   <div class="date-container">
-    <mat-form-field>
-      <mat-icon matPrefix>date_range</mat-icon>
-      <mat-label>Check In</mat-label>
-      <input matInput placeholder="select date"> 
-    </mat-form-field>
+      <mat-form-field>
+          <mat-icon matPrefix>date_range</mat-icon>
+          <mat-label>Check In</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="select date" (click)="picker.open()" [formControl]="checkInDate">
+          <mat-datepicker touchUi #picker></mat-datepicker>
+        </mat-form-field>
     <mat-form-field>
       <mat-icon matPrefix>date_range</mat-icon>
       <mat-label>Check Out</mat-label>
-      <input matInput placeholder="select date"> 
+      <input matInput [matDatepicker]="picker2" placeholder="select date" (click)="picker2.open()" [formControl]="checkoutDate"> 
+      <mat-datepicker touchUi #picker2></mat-datepicker>
     </mat-form-field>
   </div>
   <mat-form-field>
       <mat-icon matPrefix>person</mat-icon>  
     <mat-label>Guest</mat-label>
-    <input matInput placeholder="0 Adults, 0 Child"> 
+    <input matInput placeholder="0 Adults, 0 Child" value="1 Adults, 0 Child"> 
   </mat-form-field>
   <button mat-flat-button color="primary" (click)="hotelInitSearch()">SEARCH HOTEL</button>
   <!-- routerLink="/loader" -->

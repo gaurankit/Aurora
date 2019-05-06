@@ -13,6 +13,11 @@ import {SessionKeys} from '@Orxe/Core';
 export class SearchResultComponent implements OnInit {
 
   hotelCount;
+  searchLocationName:string;
+  searchLocationNameState:string;
+  searchLocationNameCountry:string;
+  searchStartDate:string;
+  searchEndDate:string;
 
   constructor(public dialog: MatDialog,private storageService : StorageService) { }
   openDialog() {
@@ -24,6 +29,11 @@ export class SearchResultComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.searchLocationName = this.storageService.get(SessionKeys.SearchLocationName);
+    this.searchLocationNameState = this.storageService.get(SessionKeys.SearchLocationNameState);
+    this.searchLocationNameCountry = this.storageService.get(SessionKeys.SearchLocationNameCountry);
+    this.searchStartDate = this.storageService.get(SessionKeys.SearchStartDate);
+    this.searchEndDate = this.storageService.get(SessionKeys.SearchEndDate);
     this.hotelCount =  this.storageService.get(SessionKeys.HotelResultCount);
   }
 

@@ -20,9 +20,9 @@ export class HotelCardComponent implements OnInit {
     console.log("Result Hotel List");
   }
 
-  genratePoints(dollerAmount): number {
-    let amount = parseFloat(dollerAmount);
-    return amount * 100;
+  genratePoints(dollerAmount): string {
+    const amount = parseFloat(dollerAmount);
+    return (amount * 100).toFixed(0);
   }
 
   goToHotelDetails(hotelID): void {

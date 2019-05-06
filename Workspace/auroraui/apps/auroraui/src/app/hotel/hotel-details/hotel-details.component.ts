@@ -53,6 +53,7 @@ export class HotelDetailsComponent implements OnInit {
     hotelList.forEach(function (hotel) {
       if(hotel.id === hotelID){
         this.hotel = hotel;
+        this.storageService.set(SessionKeys.SelectedHotelName,hotel.name);
         const url = "https://www.google.com/maps/@?api=1&map_action=map&center=36.1296,-115.173&zoom=12";
         this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(url);
       }

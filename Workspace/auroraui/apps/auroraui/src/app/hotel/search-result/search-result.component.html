@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <mat-icon routerLink="/home">arrow_back</mat-icon>
-  <span class="header-title"> Las Vegas, NV</span>
+  <span class="header-title"> {{searchLocationName}}, {{searchLocationNameState}}</span>
   <span class="example-spacer"></span>
   <button class="small-btn">MODIFY</button>
 </mat-toolbar>
@@ -8,15 +8,15 @@
   <div class="date-container">
     <mat-form-field appearance="legacy">
       <mat-label>Check In</mat-label>
-      <input matInput placeholder="select date" value="25/01/2019" disabled> 
+      <input matInput placeholder="select date" value="{{searchStartDate}}" disabled> 
     </mat-form-field>
     <mat-form-field appearance="legacy">
       <mat-label>Check Out</mat-label>
-      <input matInput placeholder="select date" value="30/01/2019" disabled> 
+      <input matInput placeholder="select date" value="{{searchEndDate}}" disabled> 
     </mat-form-field>
     <mat-form-field appearance="legacy">
       <mat-label>Guest</mat-label>
-      <input matInput placeholder="2 Adults, 0 Child" value="2 Adults, 0 Child" disabled> 
+      <input matInput placeholder="0 Adults, 0 Child" value="1 Adults, 0 Child" disabled> 
     </mat-form-field>
   </div>
 </div>

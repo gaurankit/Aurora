@@ -19,13 +19,24 @@ export class LoaderComponent implements OnInit {
   public hotelSearchResultRequest: HotelSearchResultRequest;
   statusResponse = {} as GetStatusResponse;
 
+  searchLocationName:string;
+  searchLocationNameState:string;
+  searchLocationNameCountry:string;
+  searchStartDate:string;
+  searchEndDate:string;
+
   constructor(private router: Router, private searchService: SearchService, private storageService : StorageService) { 
     this.hotelSearchStatusRequest = new HotelSearchStatusRequest();
     this.hotelSearchResultRequest = new HotelSearchResultRequest();
   }
 
   ngOnInit() {
-        this.getHotelResultStatus();
+    this.searchLocationName = this.storageService.get(SessionKeys.SearchLocationName);
+    this.searchLocationNameState = this.storageService.get(SessionKeys.SearchLocationNameState);
+    this.searchLocationNameCountry = this.storageService.get(SessionKeys.SearchLocationNameCountry);
+    this.searchStartDate = this.storageService.get(SessionKeys.SearchStartDate);
+    this.searchEndDate = this.storageService.get(SessionKeys.SearchEndDate);
+    this.getHotelResultStatus();
   }
 
   getHotelResultStatus(): void {
