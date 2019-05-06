@@ -19,9 +19,9 @@ export class RoomDetailComponent implements OnInit {
     this.roomResponse = JSON.parse(roomResponse);
   }
 
-  genratePoints(dollerAmount): number {
-    let amount = parseFloat(dollerAmount);
-    return amount * 100;
+  genratePoints(dollerAmount): string {
+    const amount = parseFloat(dollerAmount);
+    return (amount * 100).toFixed(0);
   }
 
   genrateOffer(dollerAmount): number {

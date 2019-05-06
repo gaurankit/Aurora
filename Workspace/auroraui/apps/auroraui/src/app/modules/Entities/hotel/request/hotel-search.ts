@@ -23,7 +23,7 @@ export class HotelSearchRequest {
          "minHotelRating": 1,
          "maxHotelRating": 5,
          "hotelChains": [],
-         "allowedCountry": "US"
+         "allowedCountry": ""
       },
       "travellerCountryCodeOfResidence": "US",
       "travellerNationalityCode": "US",

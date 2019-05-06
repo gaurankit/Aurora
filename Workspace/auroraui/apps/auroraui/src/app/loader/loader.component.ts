@@ -51,6 +51,7 @@ export class LoaderComponent implements OnInit {
     this.sessionId = this.storageService.get(SessionKeys.HotelInitSessionId);
     const resultRequest = this.hotelSearchResultRequest.toServiceModel();
     resultRequest.sessionId=this.sessionId;
+    resultRequest.filters.allowedCountry = this.storageService.get(SessionKeys.SearchLocationNameCountry);
     this.getResults(resultRequest);
   }
 

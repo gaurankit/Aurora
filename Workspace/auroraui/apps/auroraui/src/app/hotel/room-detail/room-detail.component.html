@@ -17,7 +17,7 @@
         <div class="room-slider">
             <img *ngFor="let image of roomResponse.hotel.images" src="{{image.URL}}">
             </div>
-            <div class="mat-h1">{{genratePoints(roomResponse.rates[i].totalFare)}}<sup>*</sup><span>Pts or</span></div>
+            <div class="mat-h1">{{genratePoints(roomResponse.rates[i].totalFare)}}<span>Pts or</span></div>
             <div class="mat-h2"><del>${{genrateOffer(roomResponse.rates[i].totalFare)}}</del>${{roomResponse.rates[i].totalFare}}<span> for 3 nights</span></div>
             <button mat-raised-button color="accent">BOOK</button>
             <div class="mat-body-1">Resort fee for USD 41.86 will be charged by hotel</div>

@@ -66,6 +66,7 @@ export class SearchComponent implements OnInit {
     searchRequest.stayPeriod.end = this.getFormattedDate(this.checkoutDate.value,true);
     searchRequest.bounds.circle.center.lat = this.location["lat"];
     searchRequest.bounds.circle.center.long = this.location["lon"];
+    searchRequest.filters.allowedCountry = this.location["country"];
 
     this.storageService.set(SessionKeys.SearchStartDate,this.getFormattedDate(this.checkInDate.value,false));
     this.storageService.set(SessionKeys.SearchEndDate,this.getFormattedDate(this.checkoutDate.value,false));
