@@ -3,11 +3,10 @@
 // };
 
 export const environment = {
-  production: true,
+  production: false,
   isMockEnabled: false,
-  flightServiceBaseUrl: '/api/air/v1.0/',
-  relayApiUrl: 'https://ynfgwlehnb.execute-api.us-east-1.amazonaws.com/Prod/api/Relay',
-  mockUrl: './../assets/mock/',
-  useRelayApi: false,
-  nxtgenApiUrl: 'https://air-be.stage.cnxloyalty.com/api/air/v1.0/'
+  hotelServiceBaseUrl: 'https://stage.cnxloyalty.com/hotel/v1.0/',
+  hotelRoomServiceBaseUrl: 'https://stage.cnxloyalty.com/hotel/v1.0/rooms/',
+  autosuggestServiceURL:'https://employeepurchase.cxtrvl.com/Services/HelperServices/SearchService.svc/Search',
+  autosuggestServiceGetURL:'https://travel-capitaloneuat.cxtrvl.com/services/HelperServices/SearchService.svc/Search?q=la&type=airport&culture=en-US'
 };

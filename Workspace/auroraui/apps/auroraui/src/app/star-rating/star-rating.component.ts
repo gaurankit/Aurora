@@ -10,12 +10,12 @@ import { MatSnackBar } from '@angular/material';
 export class StarRatingComponent implements OnInit {
 
   @Input('rating') private rating: number = 3;
-  @Input('starCount') private starCount: number = 5;
+  @Input('starCount') public starCount: number = 5;
   @Input('color') private color: string = 'primary';
   @Output() private ratingUpdated = new EventEmitter();
 
   private snackBarDuration: number = 2000;
-  private ratingArr = [];
+  public ratingArr = [];
 
   constructor(private snackBar: MatSnackBar) {
   }

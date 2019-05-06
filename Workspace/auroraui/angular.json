@@ -54,7 +54,7 @@
                 }
               ],
               "serviceWorker": true,
-              "ngswConfigPath": "apps/auroraui/ngsw-config.json"
+              "ngswConfigPath": "src/ngsw-config.json"
             }
           }
         },
